@@ -1,11 +1,20 @@
-<Project>
+<?xml version="1.0" encoding="utf-8"?><Project>
     <PropertyGroup>
+        <VersionPrefix>1.1.1</VersionPrefix>
+        <VersionSuffix></VersionSuffix>
+        <VersionSuffix Condition=" '$(VersionSuffix)' != '' AND '$(BuildNumber)' != '' ">$(VersionSuffix)-$(BuildNumber)</VersionSuffix>
+        <NoWarn>$(NoWarn);S3875;S4457</NoWarn>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <PackageVersion>$(VersionPrefix)</PackageVersion>
+        <PackageVersion Condition=" '$(VersionSuffix)' != ''">$(VersionPrefix)-$(VersionSuffix)</PackageVersion>
         <Title>NukeBuildAutomation.HelloWorld</Title>
         <Authors>SunDryOSS Contributors</Authors>
         <Description>Yet another HelloWorld</Description>
         <RepositoryType>git</RepositoryType>
         <PackageTags>hello,nuke</PackageTags>
-        <RepositoryUrl>https://github.com/sundryoss/Sundry.Helloworld</RepositoryUrl>
+        <RepositoryUrl>https://github.com/EmreKarahan/nesine-presentation</RepositoryUrl>
         <PackageProjectUrl>https://anktsrkr.github.io/</PackageProjectUrl>
         <TargetFramework>net6.0</TargetFramework>
         <LangVersion>10</LangVersion>
